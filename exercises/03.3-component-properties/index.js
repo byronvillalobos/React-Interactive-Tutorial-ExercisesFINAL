@@ -29,10 +29,10 @@ BootstrapCard.propTypes = {
 // ReactDOM.render(<BootstrapCard />, document.querySelector("#myDiv"));
 ReactDOM.render(
 	<BootstrapCard
-		title="Bob Dylan"
-		imageUrl="https://ucarecdn.com/f8cf81eb-3bab-4bba-9431-668884eab174/-/resize/300x/"
-		description="Bob Dylan (born Robert Allen Zimmerman, May 24, 1941) is an American singer-songwriter."
-		buttonUrl="https://en.wikipedia.org/wiki/Bob_Dylan"
+		title="Paul Mccartney"
+		imageUrl="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Paul_McCartney_in_October_2018.jpg/220px-Paul_McCartney_in_October_2018.jpg"
+		description="(Liverpool, Merseyside; 18 de junio de 1942) es un cantautor, compositor, músico, multiinstrumentista, escritor y actor británico."
+		buttonUrl="https://es.wikipedia.org/wiki/Paul_McCartney"
 		buttonLabel="Go to wikipedia"
 	/>,
 	document.querySelector("#myDiv")

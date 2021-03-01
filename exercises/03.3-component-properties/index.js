@@ -1,26 +1,29 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import PropType from "prop-types";
+import PropTypes from "prop-types";
 
-const BootstrapCard = props => {
+export function BootstrapCard(props) {
 	// 1) replace the hard-coded image, description, link, etc. With their property variable.
 	return (
 		<div className="card m-5">
-			<img className="card-img-top" src="https://ucarecdn.com/f8cf81eb-3bab-4bba-9431-668884eab174/-/resize/300x/" alt="Card image cap" />
+			<img className="card-img-top">{props.imageUrl}</img>
 			<div className="card-body">
 				<h5 className="card-title">{props.title}</h5>
-				<p className="card-text">Bob Dylan (born Robert Allen Zimmerman, May 24, 1941) is an American singer-songwriter.</p>
-				<a href="https://en.wikipedia.org/wiki/Bob_Dylan" className="btn btn-primary">
-					Go to wikipedia
+				<p className="card-text">{description}</p>
+				<a href={buttonUrl} className="btn btn-primary">
+					{buttonLabel}
 				</a>
 			</div>
 		</div>
 	);
-};
+}
 BootstrapCard.propTypes = {
-	title: PropType.string
-		// 2) add here the new properties into the proptypes object
+	title: PropTypes.string,
+	// 2) add here the new properties into the proptypes object
+	imageUrl: PropTypes.string,
+	description: PropTypes.string,
+	buttonUrl: PropTypes.string,
+	buttonLabel: PropTypes.string
 };
-
-
 // 3) Use ReactDOM to add the component into then DOM element #myDiv
+ReactDOM.render(<BootstrapCard />, document.querySelector("#myDiv"));
